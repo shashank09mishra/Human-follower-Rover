@@ -1,11 +1,14 @@
 1. Hardware Components:
+
 Microcontroller: Arduino or compatible board.
 Ultrasonic Sensor: 1 sensor (HC-SR04 or equivalent) to measure the distance of objects in front.
 Infrared (IR) Sensors: 2 sensors (left and right) to detect obstacles or hands.
 Motor Driver Module: 1 module (e.g., L298N, L293D, or equivalent) to control the speed and direction of the motors.
 DC Motors: 2 motors for driving the robot (one for each side).
 Power Supply: Appropriate power source (battery or power adapter) to power the microcontroller, sensors, and motors.
+
 2. Circuit Connections:
+
 Ultrasonic Sensor:
 Trig pin connected to Arduino digital pin 11.
 Echo pin connected to Arduino digital pin 12.
@@ -18,24 +21,31 @@ Motor control pins connected to Arduino digital pins 7 and 8.
 Left Motor:
 Enable pin connected to Arduino PWM pin 6.
 Motor control pins connected to Arduino digital pins 9 and 10.
+
+
 3. Software Libraries:
 NewPing Library: Required for ultrasonic distance measurement.
-Install the NewPing library in the Arduino IDE. You can download it from the Arduino Library Manager or use the following link: NewPing Library.
+Install the NewPing library in the Arduino IDE. 
+
 4. Logic and Functionality:
 The robot moves forward if no obstacles are detected within a certain range.
 The robot turns left or right depending on which IR sensor detects an obstacle.
 The robot stops if it is outside the defined range (10 cm to 30 cm).
 The rotateMotor() function is used to control the speed and direction of both motors.
+
 5. Power Requirements:
 Ensure that the power supply provides enough current and voltage to drive both the Arduino board and the motors. Typically, a 7.4V or 12V battery is used depending on the motor specifications.
+
 6. Testing and Calibration:
 Calibrate the IR sensors to ensure they detect obstacles accurately.
 Test the ultrasonic sensor for proper distance measurement and adjust the range values if necessary.
 Verify the motor speeds and adjust MAX_FORWARD_MOTOR_SPEED and MAX_MOTOR_TURN_SPEED_ADJUSTMENT constants as needed to achieve desired movement behavior.
+
 7. Assembly:
 Properly mount the sensors on the robot chassis.
 Ensure the motors are securely attached to the chassis and connected to the wheels.
 Wire all components correctly to the microcontroller according to the pin configurations.
+
 8. Additional Notes:
 Consider adding an emergency stop mechanism (e.g., a push button) for safety.
 Use appropriate resistors, capacitors, or voltage regulators if necessary to protect the circuit components.
